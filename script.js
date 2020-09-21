@@ -1,4 +1,4 @@
-var character = document.getElementById("character");  //const
+var character = document.getElementById("character");  
 var block = document.getElementById("block");
 var block2 = document.getElementById("block2");
 var block3 = document.getElementById("block3");
@@ -10,18 +10,9 @@ var punkty = 0;
 var ingame = 0;
 var sound = new Audio('jump.mp3');
 var jumpingKeyCode = 32;
-const boxes = ['block',' block2', 'block3'];
-console.log(boxes.length);
+
  
 
-function jump() {
-    if(character.classList != "animate"){
-        character.classList.add("animate");
-    }
-    setTimeout(function(){
-        character.classList.remove("animate");
-    }, 500);
-} //odnawia sie 
 
 function start() {
     ingame = 1;
@@ -34,17 +25,29 @@ function start() {
             case 50:
                 block.style.animation = "animate 1s linear infinite";
             break;
-          
-            
             case 100:
                 block.style.animation = "animate 900ms linear infinite";
             break;
+            case 200:
+                block.style.animation = "animate 750ms linear infinite";
+            break;
          
-        }
-        //funkcja od animacji 
+        } 
         punkt.innerHTML = "punkty: " + punkty;
     },100);
 }
+
+
+function jump() {
+    if(character.classList != "animate"){
+        character.classList.add("animate");
+    }
+    setTimeout(function(){
+        character.classList.remove("animate");
+    }, 500);
+}
+
+
 
 function end() {
     block.style.animation = "none";
@@ -61,18 +64,11 @@ function end() {
 }
 
 
-function showboxes() {
-    const random = Math.floor(Math.random() * boxes.length);
-console.log(random, boxes[random]);
-}
-
-
 
 document.body.onkeydown = function(e) {
     if(e.keyCode == jumpingKeyCode) {
         if(ingame == 0) {
             start();
-            showboxes();
         }
         jump();
         sound.play();
@@ -80,11 +76,9 @@ document.body.onkeydown = function(e) {
     
 }
 
-//document czyli cala strona
-
 
 var checkDead = setInterval(function(){
-    var characterTop = parseInt(window.getComputedStyle(character). //getcomputedstyle wartosc css
+    var characterTop = parseInt(window.getComputedStyle(character).
         getPropertyValue("top"));
     var blockleft = parseInt(window.getComputedStyle(block). 
         getPropertyValue("left"));
@@ -92,5 +86,3 @@ var checkDead = setInterval(function(){
         end();
     }
 },10);
-
-//setinterval funkcja ktora sie powtarza
