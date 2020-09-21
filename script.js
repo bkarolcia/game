@@ -94,3 +94,5 @@ var checkDead = setInterval(function(){
 },10);
 
 //setinterval funkcja ktora sie powtarza
+
+//usunac im konkretne pozycje 
