@@ -75,7 +75,7 @@ document.body.onkeydown = function(e) {
             showboxes();
         }
         jump();
-        sound.play();
+        //sound.play();
     }
     
 }
