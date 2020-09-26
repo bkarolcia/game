@@ -4,7 +4,7 @@ body{
 }
 
 #game{
-    width: 1000px;
+    width: 500px;
     height: 200px;
     border: 1px solid black;
     position: relative;
@@ -28,7 +28,7 @@ p{
 #character{
     width: 20px;
     height: 50px;
-    background-color: red;
+   background-color: red;
     position: relative;
     top: 150px;
     
@@ -51,36 +51,12 @@ p{
     background-color: blue;
     position: relative;
     top: 130px;
-    left: 980px;
+    left: 480px;
     bottom: 5px;
     
 }
 
 @keyframes animate{
-    0%{left:980px;}
+    0%{left:480px;}
     100%{left: -40px;}
 }
-#block2{
-    width: 20px;
-    height: 30px;
-    background-color: blue;
-    position: absolute;
-    left: 400px;
-    bottom: 50px;
-    
-    
-}
-
-
-
-#block3{
-    width: 20px;
-    height: 30px;
-    background-color: blue;
-    position: absolute;
-    left: 600px;
-    bottom: 5px;
-    top: 30px
-        
-}
-    
