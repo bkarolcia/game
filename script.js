@@ -71,7 +71,7 @@ document.body.onkeydown = function(e) {
             start();
         }
         jump();
-        sound.play();
+        //sound.play();
     }
     
 }
